@@ -1,0 +1,182 @@
+  body {
+      background-color: #111;
+      margin-top: 15px;
+      margin-bottom: 15px;
+  }
+
+h3 {
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 10px;
+}
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.demo-message {
+    display: none;
+}
+
+#messages {
+    padding-top: 15px;
+    height: 10px;
+}
+
+#facevideo-node {
+    width: 642px;
+    height: 482px;
+    display: inline-block;
+}
+
+#instructions {
+    display: none;
+}
+
+.thumbnail {
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+
+.starter-container {
+    cursor: pointer;
+    height: 141px;
+    background-size: 100% 100%;
+    background-color: #2f2f2f;
+    text-align: center;
+    border: 3px solid black;
+}
+
+#video-container {
+    display: none;
+}
+
+#svg-wrapper {
+    margin-top: 15px;
+}
+
+#svg-container {
+    margin-top: 15px;
+}
+
+#svg-curve {
+    width: 720px;
+    height: 300px;
+}
+
+line.cursor {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 1px;
+}
+
+line.cursor-wide {
+  cursor: pointer;
+}
+
+.draggable-rect {
+  fill: white;
+  fill-opacity: 0.0;
+  cursor: pointer;
+}
+
+text.time {
+    fill: #858585;
+}
+
+#text-width {
+    position: absolute;
+    visibility: hidden;
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+}
+
+#play-again {
+    display: none;
+    z-index: 2;
+}
+
+#play-again .well{
+    margin-bottom: 0;
+}
+
+.buttons
+{
+    display: inline-block;
+    margin: 0.5em;
+    text-decoration: none;
+    color: #333;
+    border-radius: .2em;
+    text-align: center;
+}
+
+#nav li.buttons span {
+    float: left;
+    margin-left: 10px;
+}
+
+.buttons:active {
+    box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+    position: relative;
+    top: 1px;
+}
+
+.buttons:before
+{
+    float: left;
+    width: 1em;
+    text-align: center;
+    font-size: 1.6em;
+    padding: 0.05em;
+    pointer-events: none;
+}
+
+.buttons:hover {
+    cursor: pointer;
+}
+
+.all-face:before
+{ content: "\1F610"; }
+.smiling-face:before
+{ content: "\1F603"; }
+.angry-face:before
+{content : "\1F620";}
+.contempt-face:before
+{content : "\1F60F";}
+.disgusted-face:before
+{content : "\1F601";}
+.surprise-face:before
+{content : "\1F62F";}
+
+.box-squared {
+    width: 110px;
+    height: 30px;
+    line-height: 28px;
+}
+
+.all-box {
+    background: #767944;
+}
+.joy-box {
+    background: white;
+}
+.anger-box {
+    background: orangered;
+}
+.contempt-box {
+    background: yellow;
+}
+.disgust-box {
+    background: deeppink;
+}
+.surprise-box {
+    background: green;
+}

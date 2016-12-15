@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<html>
+<head>
+    <title>Affectiva Arduino Demo</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+     #map {
+      height: 400px;
+      width: 100%;
+     }
+     </style>
+</head>
+<body>
+  <div class="centered">
+    <img id="emoji">
+  </div>
+  <button class="button-left" id="start" onclick="onStart()">Start</button>
+  <button class="button" id="stop" onclick="onStop()">Stop</button>
+  <button class="button" id="reset" onclick="onReset()">Reset</button>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 centered" id="affdex_elements" style="width:680px;height:480px;"></div>
+      <div id="map"></div>
+      <div class="col-md-4">
+        <div style="height:25em;">
+          <strong>EMOTION TRACKING RESULTS</strong>
+          <div id="results" style="word-wrap:break-word;"></div>
+        </div>
+        <div>
+          <strong>DETECTOR LOG MSGS</strong>
+        </div>
+        <div id="logs"></div>
+      </div>
+    </div>
+  </div>
+  <script language="JavaScript" type="text/javascript" src="./vendor/jquery-2.1.4.js"></script>
+  <script src="https://download.affectiva.com/js/3.1/affdex.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./client.js"></script>
+  <script>
+      function initMap() {
+        var uluru = {lat: 37.873635, lng: -122.55};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPvKwTSo_F_yaYvt-WGKXTve8hHHi_68w&callback=initMap">
+     </script>
+</body>

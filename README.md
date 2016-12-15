@@ -1,2 +1,10 @@
-# flower_feels
-The software component for the facial detection IOT vase
+# Arduino RGB LED
+
+tbc
+
+[Sample video](https://cloudup.com/clQwFV8Y72N)
+
+## Run
+
+`npm install`
+`node rgb.js`
