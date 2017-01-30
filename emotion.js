@@ -1,13 +1,10 @@
 'use strict';
-
 const five = require('johnny-five');
 const express = require('express');
 const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
-
 const twilio = require('twilio');
-
 const TWILIO_ACCOUNT_SID = 'AC64f049394dd29fb60d3329f11ee97af7';
 const TWILIO_AUTH_TOKEN = 'a49efeb6d7e4c8da0b152cdc557cf5ed';
 const chat = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
@@ -28,12 +25,12 @@ app.get('/', function(req, res) {
 });
 
 var SerialPort = require("serialport");
-var serialport = new SerialPort("/dev/cu.usbmodem389", {
+var serialport = new SerialPort("/dev/cu.usbmodem1421", {
   parser: SerialPort.parsers.readline('\n'),
   baudRate: 9600
 });
 
-var serialport_bluetooth = new SerialPort("/dev/cu.usbmodem390", {
+var serialport_bluetooth = new SerialPort("/dev/cu.usbmodem1421", {
   parser: SerialPort.parsers.readline('\n'),
   baudRate: 115200
 });
